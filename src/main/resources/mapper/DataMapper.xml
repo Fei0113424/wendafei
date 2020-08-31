@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nowcoder.wenda.mapper.CrudMapper">
+
+    <select id="queryByCradNum" resultType="com.nowcoder.wenda.model.TakeUser">
+        select * from usertest where sfzh=#{sfzh}
+    </select>
+    
+    <insert id="insertUser" >
+        insert into usertest (username,sfzh,phone)  values (#{username},#{sfzh},#{phone})
+    </insert>
+
+    <delete id="deleteByCard" >
+        delete from usertest where sfzh=#{sfzh}
+    </delete>
+
+</mapper>
