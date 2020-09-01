@@ -140,7 +140,7 @@
                         <div class="layui-inline">
                             <label class="layui-form-label">创建时间</label>
                             <div class="layui-input-inline">
-                                <input name="create_time" class="layui-input" type="text" placeholder="新增用户不用填写"
+                                <input name="create_time" class="layui-input" type="text" placeholder="暂无创建时间"
                                        autocomplete="off" readonly>
                             </div>
                         </div>
@@ -149,18 +149,18 @@
                         <div class="layui-inline">
                             <label class="layui-form-label">删除时间</label>
                             <div class="layui-input-inline">
-                                <input name="delete_time" class="layui-input" type="text" placeholder="新增用户不用填写"
+                                <input name="delete_time" class="layui-input" type="text" placeholder="暂无删除时间"
                                        autocomplete="off" readonly>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="layui-btn-group text-center addBtnGroup none">
+                    <div class="text-center addBtnGroup none">
                         <button class="layui-btn layui-btn-normal addSubmit">提交</button>
                         <button class="layui-btn layui-btn-danger cancel">取消</button>
                     </div>
-                    <div class="layui-btn-group text-center resultBtnGroup none">
+                    <div class="text-center resultBtnGroup none">
                         <button class="layui-btn layui-btn-normal updateBtn">修改</button>
                         <button class="layui-btn layui-btn-danger deleteBtn">删除</button>
                     </div>
@@ -202,6 +202,8 @@
                         form.val('userForm', '')
                         form.render()
                         $(".userForm input").removeAttr("readonly");
+                        $(".userForm input[name='create_time']").attr('readonly','readonly')
+                            $(".userForm input[name='delete_time']").attr('readonly','readonly')
                     } else {
                         currenId=$("#idcard").val()
                         // $(".userinfo").text(res.data)
@@ -246,11 +248,15 @@
         $(".btnAdd").click(function () {
             $(".userForm").removeClass('none')
             $(".userForm input").removeAttr("readonly");
+            $(".userForm input[name='create_time']").attr('readonly','readonly')
+            $(".userForm input[name='delete_time']").attr('readonly','readonly')
             $(".resultBtnGroup").addClass('none')
             $(".addBtnGroup").removeClass('none')
         })
         $(".updateBtn").click(function (){
             $(".userForm input").removeAttr("readonly");
+            $(".userForm input[name='create_time']").attr('readonly','readonly')
+            $(".userForm input[name='delete_time']").attr('readonly','readonly')
             $(".resultBtnGroup").addClass('none')
             $(".addBtnGroup").removeClass('none')
         })
