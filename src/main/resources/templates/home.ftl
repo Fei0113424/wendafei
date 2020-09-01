@@ -12,6 +12,10 @@
     input[readonly]{
         border: none;
     }
+    .layui-form-label{
+        width: 100px;
+    }
+
 </style>
 <body>
 <div class="layui-container">
@@ -27,7 +31,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">身份证号：</label>
                         <div class="layui-input-inline">
-                            <input name="sfzh" id="idcard" type="text" class="layui-input" placeholder="请输入身份证号"
+                            <input name="sfzjhm" id="idcard" type="text" class="layui-input" placeholder="请输入身份证号"
                                    autocomplete="off">
                         </div>
 
@@ -38,33 +42,120 @@
                 </div>
 
                 <div class="userForm none" lay-filter="userForm" id="userForm">
+
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">用户姓名</label>
+                            <label class="layui-form-label">车牌号</label>
                             <div class="layui-input-inline">
-                                <input name="username" class="layui-input" placeholder="请输入用户姓名" type="text"
+                                <input name="cph" class="layui-input" type="text" placeholder="请输入车牌号"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">查询来源</label>
+                            <div class="layui-input-inline">
+                                <input name="cxly" class="layui-input" type="text" placeholder="请输入查询来源"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">查询类型</label>
+                            <div class="layui-input-inline">
+                                <input name="cxlx" class="layui-input" type="text" placeholder="请输入查询类型"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">身份证件号</label>
+                            <div class="layui-input-inline">
+                                <input name="sfzjhm" class="layui-input" type="text" placeholder="请输入身份证号"
                                        autocomplete="off">
                             </div>
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">身份证号</label>
+                            <label class="layui-form-label">姓名</label>
                             <div class="layui-input-inline">
-                                <input name="sfzh" class="layui-input" type="text" placeholder="请输入身份号码"
+                                <input name="xm" class="layui-input" type="text" placeholder="请输入姓名"
                                        autocomplete="off">
                             </div>
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-inline">
-                            <label class="layui-form-label">手机号码</label>
+                            <label class="layui-form-label">是否有证件</label>
                             <div class="layui-input-inline">
-                                <input name="phone" class="layui-input" type="text" placeholder="请输入手机号码"
+                                <input name="sfyzj" class="layui-input" type="text" placeholder="请输入"
                                        autocomplete="off">
                             </div>
                         </div>
                     </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否常住人口</label>
+                            <div class="layui-input-inline">
+                                <input name="sfczrk" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否暂住人口</label>
+                            <div class="layui-input-inline">
+                                <input name="sfzzrk" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否持有居住证</label>
+                            <div class="layui-input-inline">
+                                <input name="sfcyjzz" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">有效标志</label>
+                            <div class="layui-input-inline">
+                                <input name="yxbz" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">创建时间</label>
+                            <div class="layui-input-inline">
+                                <input name="create_time" class="layui-input" type="text" placeholder="新增用户不用填写"
+                                       autocomplete="off" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">删除时间</label>
+                            <div class="layui-input-inline">
+                                <input name="delete_time" class="layui-input" type="text" placeholder="新增用户不用填写"
+                                       autocomplete="off" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="layui-btn-group text-center addBtnGroup none">
                         <button class="layui-btn layui-btn-normal addSubmit">提交</button>
                         <button class="layui-btn layui-btn-danger cancel">取消</button>
@@ -96,7 +187,7 @@
             $.ajax({
                 type: 'get',
                 data: {
-                    sfzh: $("#idcard").val()
+                    sfzjhm: $("#idcard").val()
                 },
                 dataType: "json",
                 url: './queryMas',
@@ -119,9 +210,20 @@
                         $(".resultBtnGroup").removeClass('none')
                         $(".addBtnGroup").addClass('none')
                         // form.val('userForm', res.data)
-                       $(".userForm input[name='sfzh']").val( res.data.sfzh),
-                          $(".userForm input[name='username']").val(res.data.username),
-                        $(".userForm input[name='phone']").val(res.data.phone)
+                       $(".userForm input[name='sfzjhm']").val( res.data.sfzjhm),
+                          $(".userForm input[name='cxly']").val(res.data.cxly),
+                        $(".userForm input[name='cxlx']").val(res.data.cxlx)
+                        $(".userForm input[name='xm']").val(res.data.xm),
+                            $(".userForm input[name='cph']").val(res.data.cph),
+                            $(".userForm input[name='sfyzj']").val(res.data.sfyzj),
+                            $(".userForm input[name='sfczrk']").val(res.data.sfczrk),
+                            $(".userForm input[name='sfzzrk']").val(res.data.sfzzrk),
+                            $(".userForm input[name='sfcyjzz']").val(res.data.sfcyjzz),
+                            $(".userForm input[name='create_time']").val(res.data.create_time),
+                            $(".userForm input[name='delete_time']").val(res.data.delete_time),
+                            $(".userForm input[name='yxbz']").val(res.data.yxbz)
+
+
                         // form.render()
                     }
                 },
@@ -165,7 +267,7 @@
                     $.ajax({
                         type: 'post',
                         data: JSON.stringify({
-                            sfzh: currenId,
+                            sfzjhm: currenId,
                         }),
                         contentType: 'application/json; charset=UTF-8',
                         dataType: "json",
@@ -192,9 +294,19 @@
             $.ajax({
                 type: 'post',
                 data: JSON.stringify({
-                    sfzh: $(".userForm input[name='sfzh']").val(),
-                    username: $(".userForm input[name='username']").val(),
-                    phone: $(".userForm input[name='phone']").val()
+                    sfzjhm: $(".userForm input[name='sfzjhm']").val(),
+                    cxly: $(".userForm input[name='cxly']").val(),
+                    cxlx: $(".userForm input[name='cxlx']").val(),
+                    cph: $(".userForm input[name='cph']").val(),
+                    xm: $(".userForm input[name='xm']").val(),
+                    sfyzj: $(".userForm input[name='sfyzj']").val(),
+                    sfczrk: $(".userForm input[name='sfczrk']").val(),
+                    sfzzrk: $(".userForm input[name='sfzzrk']").val(),
+                    sfcyjzz: $(".userForm input[name='sfcyjzz']").val(),
+                    create_time: $(".userForm input[name='create_time']").val(),
+                    delete_time: $(".userForm input[name='delete_time']").val(),
+                    yxbz: $(".userForm input[name='yxbz']").val()
+
                 }),
                 contentType: 'application/json; charset=UTF-8',
                 dataType: "json",

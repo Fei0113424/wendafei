@@ -2,31 +2,113 @@ package com.nowcoder.wenda.model;
 
 public class TakeUser {
 
-    private String username ;
-    private String sfzh;
-    private String phone;//地址
+    private  String cph;
+    private String cxly;
+    private String cxlx;
+    private String sfzjhm;
+    private String xm;
+    private String sfyzj;
+    private String sfczrk;
+    private String sfzzrk;
+    private String sfcyjzz;
 
-    public String getUsername() {
-        return username;
+    private  String yxbz;
+    private  String create_time;
+    private  String delete_time;
+
+    public String getCph() {
+        return cph;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setCph(String cph) {
+        this.cph = cph;
     }
 
-    public String getSfzh() {
-        return sfzh;
+    public String getCxly() {
+        return cxly;
     }
 
-    public void setSfzh(String sfzh) {
-        this.sfzh = sfzh;
+    public void setCxly(String cxly) {
+        this.cxly = cxly;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCxlx() {
+        return cxlx;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setCxlx(String cxlx) {
+        this.cxlx = cxlx;
+    }
+
+    public String getSfzjhm() {
+        return sfzjhm;
+    }
+
+    public void setSfzjhm(String sfzjhm) {
+        this.sfzjhm = sfzjhm;
+    }
+
+    public String getXm() {
+        return xm;
+    }
+
+    public void setXm(String xm) {
+        this.xm = xm;
+    }
+
+    public String getSfyzj() {
+        return sfyzj;
+    }
+
+    public void setSfyzj(String sfyzj) {
+        this.sfyzj = sfyzj;
+    }
+
+    public String getSfczrk() {
+        return sfczrk;
+    }
+
+    public void setSfczrk(String sfczrk) {
+        this.sfczrk = sfczrk;
+    }
+
+    public String getSfzzrk() {
+        return sfzzrk;
+    }
+
+    public void setSfzzrk(String sfzzrk) {
+        this.sfzzrk = sfzzrk;
+    }
+
+    public String getSfcyjzz() {
+        return sfcyjzz;
+    }
+
+    public void setSfcyjzz(String sfcyjzz) {
+        this.sfcyjzz = sfcyjzz;
+    }
+
+    public String getYxbz() {
+        return yxbz;
+    }
+
+    public void setYxbz(String yxbz) {
+        this.yxbz = yxbz;
+    }
+
+    public String getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(String create_time) {
+        this.create_time = create_time;
+    }
+
+    public String getDelete_time() {
+        return delete_time;
+    }
+
+    public void setDelete_time(String delete_time) {
+        this.delete_time = delete_time;
     }
 }

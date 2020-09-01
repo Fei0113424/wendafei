@@ -22,11 +22,11 @@ public class IndexController {
 
     @RequestMapping(value = "/queryMas",method = {RequestMethod.GET,RequestMethod.POST})
     @ResponseBody
-    public ResponseData<TakeUser> query(String sfzh){
-        if (sfzh==null || sfzh.length()==0){
+    public ResponseData<TakeUser> query(String sfzjhm){
+        if (sfzjhm==null || sfzjhm.length()==0){
             throw new RuntimeException("身份证号码不能为空");
         }
-        TakeUser takeUser =querySevice.queryBy(sfzh);
+        TakeUser takeUser =querySevice.queryBy(sfzjhm);
         return new ResponseData<>(takeUser) ;
     }
 
@@ -34,6 +34,9 @@ public class IndexController {
     @ResponseBody
     public ResponseData insert(@RequestBody TakeUser takeUser){
 
+        if (takeUser.getSfzjhm()==null || takeUser.getSfzjhm().length()==0){
+            throw new RuntimeException("身份证号码不能为空");
+        }
       querySevice.insertUser(takeUser);
 
       return  new ResponseData();
@@ -42,21 +45,18 @@ public class IndexController {
 
     @RequestMapping(value = "deleteMas")
     @ResponseBody
-    public void delete(@RequestParam(value = "sfzh",required = false) String sfzh){
+    public ResponseData delete(@RequestParam(value = "sfzjhm",required = false) String sfzh){
 
         if (sfzh==null || sfzh.length()==0){
             throw new RuntimeException("身份证号码不能为空");
         }
         querySevice.deleteUser(sfzh);
 
-    }
-
-    @RequestMapping(value = "updataMas")
-    @ResponseBody
-    public void updata(TakeUser takeUser){
-
+        return new ResponseData();
 
     }
+
+
 
 
 

@@ -3,11 +3,11 @@
 <mapper namespace="com.nowcoder.wenda.mapper.CrudMapper">
 
     <select id="queryByCradNum" resultType="com.nowcoder.wenda.model.TakeUser">
-        select * from usertest where sfzh=#{sfzh}
+        select * from takeaway_user where sfzjhm=#{sfzjhm}
     </select>
     
     <insert id="insertUser" >
-        insert into usertest (username,sfzh,phone)  values (#{username},#{sfzh},#{phone})
+        insert into takeaway_user (cph,cxly,cxlx,sfzjhm,xm,sfyzj,sfczrk,sfzzrk,sfcyjzz,yxbz,create_time)values (#{cph},#{cxly},#{cxlx},#{sfzjhm},#{xm},#{sfyzj},#{sfczrk},#{sfzzrk},#{sfcyjzz},#{yxbz},#{create_time})
     </insert>
 
     <delete id="deleteByCard" >

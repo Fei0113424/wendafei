@@ -21,10 +21,10 @@ public interface CrudMapper {
 
      //int adduser(TakeUser takeUser);
 
-     TakeUser queryByCradNum(String sfzh);
+     TakeUser queryByCradNum(String sfzjhm);
 
      void insertUser(TakeUser takeUser);
 
-     void deleteByCard(String sfzh);
+     void deleteByCard(String sfzjhm);
 
 }
