@@ -166,7 +166,146 @@
                     </div>
                 </div>
             </div>
-            <div class="layui-tab-item">滴滴查询</div>
+            <div class="layui-tab-item">
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号：</label>
+                        <div class="layui-input-inline">
+                            <input name="ddsfzh" id="ddidcard" type="text" class="layui-input" placeholder="请输入身份证号"
+                                   autocomplete="off">
+                        </div>
+
+                        <button class="layui-btn ddbtnSearch">查询</button>
+                        <button class="layui-btn layui-btn-normal ddbtnAdd">添加</button>
+                    </div>
+
+                </div>
+
+                <div class="dduserForm none" lay-filter="dduserForm" id="dduserForm">
+
+                    <#-- <div class="layui-form-item">
+                         <div class="layui-inline">
+                             <label class="layui-form-label">车牌号</label>
+                             <div class="layui-input-inline">
+                                 <input name="cph" class="layui-input" type="text" placeholder="请输入车牌号"
+                                        autocomplete="off">
+                             </div>
+                         </div>
+                     </div>-->
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">查询来源</label>
+                            <div class="layui-input-inline">
+                                <input name="cxly" class="layui-input" type="text" placeholder="请输入查询来源"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">查询类型</label>
+                            <div class="layui-input-inline">
+                                <input name="cxlx" class="layui-input" type="text" placeholder="请输入查询类型"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">身份证件号</label>
+                            <div class="layui-input-inline">
+                                <input name="sfzh" class="layui-input" type="text" placeholder="请输入身份证号"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">姓名</label>
+                            <div class="layui-input-inline">
+                                <input name="xm" class="layui-input" type="text" placeholder="请输入姓名"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否有证件</label>
+                            <div class="layui-input-inline">
+                                <input name="sfyzj" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否常住人口</label>
+                            <div class="layui-input-inline">
+                                <input name="sfczrk" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否暂住人口</label>
+                            <div class="layui-input-inline">
+                                <input name="sfzzrk" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">是否持有居住证</label>
+                            <div class="layui-input-inline">
+                                <input name="sfcyjzz" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">有效标志</label>
+                            <div class="layui-input-inline">
+                                <input name="yxbz" class="layui-input" type="text" placeholder="请输入"
+                                       autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">创建时间</label>
+                            <div class="layui-input-inline">
+                                <input name="create_time" class="layui-input" type="text" placeholder="暂无创建时间"
+                                       autocomplete="off" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">删除时间</label>
+                            <div class="layui-input-inline">
+                                <input name="delete_time" class="layui-input" type="text" placeholder="暂无删除时间"
+                                       autocomplete="off" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="text-center ddaddBtnGroup none">
+                        <button class="layui-btn layui-btn-normal ddaddSubmit">提交</button>
+                        <button class="layui-btn layui-btn-danger ddcancel">取消</button>
+                    </div>
+                    <div class="text-center ddresultBtnGroup none">
+                        <button class="layui-btn layui-btn-normal ddupdateBtn">修改</button>
+                        <button class="layui-btn layui-btn-danger dddeleteBtn">删除</button>
+                    </div>
+                </div>
+            </div>
             <div class="layui-tab-item">快递查询</div>
         </div>
     </div>
@@ -332,6 +471,158 @@
         $(".cancel").click(function () {
             $(".userForm").addClass('none')
             form.val('userForm', '')
+        })
+/**********滴滴*********/
+        var currenddId=''//查询出的身份证号
+        function ddsearchFun() {
+            $.ajax({
+                type: 'get',
+                data: {
+                    sfzh: $("#ddidcard").val()
+                },
+                dataType: "json",
+                url: './queryMas',
+                success: function (res) {
+                    if (res.data == null) {
+                        layer.msg('未查询到该条信息', {
+                            time: 3000, //20s后自动关闭
+                        });
+                        currenddId=''
+                        $(".dduserinfo").text('未查询到该条信息')
+                        $(".dduserForm").addClass('none')
+                        form.val('dduserForm', '')
+                        form.render()
+                        $(".dduserForm input").removeAttr("readonly");
+                        $(".dduserForm input[name='create_time']").attr('readonly','readonly')
+                        $(".dduserForm input[name='delete_time']").attr('readonly','readonly')
+                    } else {
+                        currenddId=$("#ddidcard").val()
+                        // $(".userinfo").text(res.data)
+                        $(".dduserForm").removeClass('none')
+                        $(".dduserForm input").attr('readonly','readonly')
+                        $(".ddresultBtnGroup").removeClass('none')
+                        $(".ddaddBtnGroup").addClass('none')
+                        // form.val('userForm', res.data)
+                        $(".dduserForm input[name='sfzh']").val( res.data.sfzh),
+                            $(".dduserForm input[name='cxly']").val(res.data.cxly),
+                            $(".dduserForm input[name='cxlx']").val(res.data.cxlx)
+                        $(".dduserForm input[name='xm']").val(res.data.xm),
+                            //$(".userForm input[name='cph']").val(res.data.cph),
+                            $(".dduserForm input[name='sfyzj']").val(res.data.sfyzj),
+                            $(".dduserForm input[name='sfczrk']").val(res.data.sfczrk),
+                            $(".dduserForm input[name='sfzzrk']").val(res.data.sfzzrk),
+                            $(".dduserForm input[name='sfcyjzz']").val(res.data.sfcyjzz),
+                            $(".dduserForm input[name='create_time']").val(res.data.create_time),
+                            $(".dduserForm input[name='delete_time']").val(res.data.delete_time),
+                            $(".dduserForm input[name='yxbz']").val(res.data.yxbz)
+
+
+                        // form.render()
+                    }
+                },
+                error: function (err) {
+
+                }
+            })
+        }
+
+        $('.ddbtnSearch').click(function () {
+            if ($("#ddidcard").val() == '') {
+                layer.msg('请输入用户身份证号！', {
+                    time: 3000, //20s后自动关闭
+                });
+                currenddId=''
+            } else {
+                ddsearchFun()
+            }
+        })
+        $(".ddbtnAdd").click(function () {
+            $(".dduserForm").removeClass('none')
+            $(".dduserForm input").removeAttr("readonly");
+            $(".dduserForm input[name='create_time']").attr('readonly','readonly')
+            $(".dduserForm input[name='delete_time']").attr('readonly','readonly')
+            $(".ddresultBtnGroup").addClass('none')
+            $(".ddaddBtnGroup").removeClass('none')
+        })
+        $(".ddupdateBtn").click(function (){
+            $(".dduserForm input").removeAttr("readonly");
+            $(".dduserForm input[name='create_time']").attr('readonly','readonly')
+            $(".dduserForm input[name='delete_time']").attr('readonly','readonly')
+            $(".ddresultBtnGroup").addClass('none')
+            $(".ddaddBtnGroup").removeClass('none')
+        })
+        $(".dddeleteBtn").click(function (){
+            layer.open({
+                type: 1
+                ,id: 'layerDemo2' //防止重复弹出
+                ,content: '<div style="padding: 20px 100px;">确认删除？</div>'
+                ,btn: '确认'
+                ,btnAlign: 'c' //按钮居中
+                ,shade: 0 //不显示遮罩
+                ,yes: function(index){
+                    layer.close();
+                    $.ajax({
+                        type: 'post',
+                        data: JSON.stringify({
+                            sfzh: currenddId,
+                        }),
+                        contentType: 'application/json; charset=UTF-8',
+                        dataType: "json",
+                        url: './deleteMas',
+                        success: function (res) {
+                            layer.msg('删除成功！', {
+                                time: 3000, //20s后自动关闭
+                            });
+                            layer.close(index)
+                            $(".dduserForm").addClass('none')
+                            form.val('dduserForm', '')
+                        },
+                        error: function (err) {
+                            layer.close(index)
+                            layer.msg('删除失败！'+err.responseJSON.message, {
+                                time: 3000, //20s后自动关闭
+                            });
+                        }
+                    })
+                }
+            });
+        })
+        $(".ddaddSubmit").click(function () {
+            $.ajax({
+                type: 'post',
+                data: JSON.stringify({
+                    sfzh: $(".dduserForm input[name='sfzh']").val(),
+                    cxly: $(".dduserForm input[name='cxly']").val(),
+                    cxlx: $(".dduserForm input[name='cxlx']").val(),
+                    //cph: $(".userForm input[name='cph']").val(),
+                    xm: $(".dduserForm input[name='xm']").val(),
+                    sfyzj: $(".dduserForm input[name='sfyzj']").val(),
+                    sfczrk: $(".dduserForm input[name='sfczrk']").val(),
+                    sfzzrk: $(".dduserForm input[name='sfzzrk']").val(),
+                    sfcyjzz: $(".dduserForm input[name='sfcyjzz']").val(),
+                    create_time: $(".dduserForm input[name='create_time']").val(),
+                    delete_time: $(".dduserForm input[name='delete_time']").val(),
+                    yxbz: $(".dduserForm input[name='yxbz']").val()
+
+                }),
+                contentType: 'application/json; charset=UTF-8',
+                dataType: "json",
+                url: './insertMas',
+                success: function (res) {
+                    layer.msg('添加成功！', {
+                        time: 3000, //20s后自动关闭
+                    });
+                    $(".dduserForm").addClass('none')
+                    form.val('dduserForm', '')
+                },
+                error: function (err) {
+
+                }
+            })
+        })
+        $(".ddcancel").click(function () {
+            $(".dduserForm").addClass('none')
+            form.val('dduserForm', '')
         })
     })
 </script>
