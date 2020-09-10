@@ -1,8 +1,7 @@
 package com.nowcoder.wenda.model;
 
-public class TakeUser {
+public class Expressman {
 
-    //private  String cph;
     private String cxly;
     private String cxlx;
     private String sfzh;
@@ -11,18 +10,11 @@ public class TakeUser {
     private String sfczrk;
     private String sfzzrk;
     private String sfcyjzz;
-
+    private String sskdgs;
+    private String sjh;
     private  String yxbz;
     private  String create_time;
     private  String delete_time;
-
-/*    public String getCph() {
-        return cph;
-    }
-
-    public void setCph(String cph) {
-        this.cph = cph;
-    }*/
 
     public String getCxly() {
         return cxly;
@@ -86,6 +78,22 @@ public class TakeUser {
 
     public void setSfcyjzz(String sfcyjzz) {
         this.sfcyjzz = sfcyjzz;
+    }
+
+    public String getSskdgs() {
+        return sskdgs;
+    }
+
+    public void setSskdgs(String sskdgs) {
+        this.sskdgs = sskdgs;
+    }
+
+    public String getSjh() {
+        return sjh;
+    }
+
+    public void setSjh(String sjh) {
+        this.sjh = sjh;
     }
 
     public String getYxbz() {

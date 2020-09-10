@@ -15,8 +15,8 @@ public class MTuanServiceImpl implements MTuanSevice {
     @Autowired
     private CrudMapper queryMapper ;
     @Override
-    public TakeUser queryBy(String sfzjhm) {
-        TakeUser user = queryMapper.queryByCradNum(sfzjhm);
+    public TakeUser queryBy(String sfzh) {
+        TakeUser user = queryMapper.queryByCradNum(sfzh);
         return user;
     }
 
@@ -25,7 +25,7 @@ public class MTuanServiceImpl implements MTuanSevice {
 
         //if (takeUser.getSfzh() == queryMapper.queryByCradNum(sfzh))
 
-        TakeUser user = this.queryBy(takeUser.getSfzjhm());
+        TakeUser user = this.queryBy(takeUser.getSfzh());
         if(user!=null) {
             throw new RuntimeException("用户已存在");
         }
@@ -38,13 +38,13 @@ public class MTuanServiceImpl implements MTuanSevice {
     }
 
     @Override
-    public void deleteUser(String sfzh) {
+    public void deleteUser(TakeUser takeUser) {
 
-        TakeUser takeUser = new TakeUser();
+
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         takeUser.setDelete_time(df.format(new Date()));
         takeUser.setYxbz("0");
-        queryMapper.deleteByCard(sfzh);
+        queryMapper.deleteByCard(takeUser);
 
     }
 }

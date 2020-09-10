@@ -31,7 +31,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">身份证号：</label>
                         <div class="layui-input-inline">
-                            <input name="sfzjhm" id="idcard" type="text" class="layui-input" placeholder="请输入身份证号"
+                            <input name="sfzh" id="idcard" type="text" class="layui-input" placeholder="请输入身份证号"
                                    autocomplete="off">
                         </div>
 
@@ -43,7 +43,7 @@
 
                 <div class="userForm none" lay-filter="userForm" id="userForm">
 
-                    <div class="layui-form-item">
+                   <#-- <div class="layui-form-item">
                         <div class="layui-inline">
                             <label class="layui-form-label">车牌号</label>
                             <div class="layui-input-inline">
@@ -51,7 +51,7 @@
                                        autocomplete="off">
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="layui-form-item">
                         <div class="layui-inline">
@@ -77,7 +77,7 @@
                         <div class="layui-inline">
                             <label class="layui-form-label">身份证件号</label>
                             <div class="layui-input-inline">
-                                <input name="sfzjhm" class="layui-input" type="text" placeholder="请输入身份证号"
+                                <input name="sfzh" class="layui-input" type="text" placeholder="请输入身份证号"
                                        autocomplete="off">
                             </div>
                         </div>
@@ -187,7 +187,7 @@
             $.ajax({
                 type: 'get',
                 data: {
-                    sfzjhm: $("#idcard").val()
+                    sfzh: $("#idcard").val()
                 },
                 dataType: "json",
                 url: './queryMas',
@@ -212,11 +212,11 @@
                         $(".resultBtnGroup").removeClass('none')
                         $(".addBtnGroup").addClass('none')
                         // form.val('userForm', res.data)
-                       $(".userForm input[name='sfzjhm']").val( res.data.sfzjhm),
+                       $(".userForm input[name='sfzh']").val( res.data.sfzh),
                           $(".userForm input[name='cxly']").val(res.data.cxly),
                         $(".userForm input[name='cxlx']").val(res.data.cxlx)
                         $(".userForm input[name='xm']").val(res.data.xm),
-                            $(".userForm input[name='cph']").val(res.data.cph),
+                           //$(".userForm input[name='cph']").val(res.data.cph),
                             $(".userForm input[name='sfyzj']").val(res.data.sfyzj),
                             $(".userForm input[name='sfczrk']").val(res.data.sfczrk),
                             $(".userForm input[name='sfzzrk']").val(res.data.sfzzrk),
@@ -273,7 +273,7 @@
                     $.ajax({
                         type: 'post',
                         data: JSON.stringify({
-                            sfzjhm: currenId,
+                            sfzh: currenId,
                         }),
                         contentType: 'application/json; charset=UTF-8',
                         dataType: "json",
@@ -300,10 +300,10 @@
             $.ajax({
                 type: 'post',
                 data: JSON.stringify({
-                    sfzjhm: $(".userForm input[name='sfzjhm']").val(),
+                    sfzh: $(".userForm input[name='sfzh']").val(),
                     cxly: $(".userForm input[name='cxly']").val(),
                     cxlx: $(".userForm input[name='cxlx']").val(),
-                    cph: $(".userForm input[name='cph']").val(),
+                    //cph: $(".userForm input[name='cph']").val(),
                     xm: $(".userForm input[name='xm']").val(),
                     sfyzj: $(".userForm input[name='sfyzj']").val(),
                     sfczrk: $(".userForm input[name='sfczrk']").val(),

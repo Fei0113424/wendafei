@@ -16,17 +16,17 @@ import java.util.Map;
  *
  */
 @Controller
-public class IndexController {
+public class MtwmController {
     @Autowired
     private MTuanSevice querySevice ;
 
     @RequestMapping(value = "/queryMas",method = {RequestMethod.GET,RequestMethod.POST})
     @ResponseBody
-    public ResponseData<TakeUser> query(String sfzjhm){
-        if (sfzjhm==null || sfzjhm.length()==0){
+    public ResponseData<TakeUser> query(String sfzh){
+        if (sfzh==null || sfzh.length()==0){
             throw new RuntimeException("身份证号码不能为空");
         }
-        TakeUser takeUser =querySevice.queryBy(sfzjhm);
+        TakeUser takeUser =querySevice.queryBy(sfzh);
         return new ResponseData<>(takeUser) ;
     }
 
@@ -34,7 +34,7 @@ public class IndexController {
     @ResponseBody
     public ResponseData insert(@RequestBody TakeUser takeUser){
 
-        if (takeUser.getSfzjhm()==null || takeUser.getSfzjhm().length()==0){
+        if (takeUser.getSfzh()==null || takeUser.getSfzh().length()==0){
             throw new RuntimeException("身份证号码不能为空");
         }
       querySevice.insertUser(takeUser);
@@ -43,14 +43,11 @@ public class IndexController {
 
     }
 
-    @RequestMapping(value = "deleteMas")
+    @RequestMapping(value = "/deleteMas")
     @ResponseBody
-    public ResponseData delete(@RequestParam(value = "sfzjhm",required = false) String sfzh){
+    public ResponseData delete(@RequestBody TakeUser takeUser){
 
-        if (sfzh==null || sfzh.length()==0){
-            throw new RuntimeException("身份证号码不能为空");
-        }
-        querySevice.deleteUser(sfzh);
+        querySevice.deleteUser(takeUser);
 
         return new ResponseData();
 

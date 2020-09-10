@@ -1,8 +1,8 @@
 package com.nowcoder.wenda.model;
 
-public class TakeUser {
-
-    //private  String cph;
+public class DdDriver {
+    private  String cph;
+    private String sjh;
     private String cxly;
     private String cxlx;
     private String sfzh;
@@ -16,13 +16,21 @@ public class TakeUser {
     private  String create_time;
     private  String delete_time;
 
-/*    public String getCph() {
+    public String getCph() {
         return cph;
     }
 
     public void setCph(String cph) {
         this.cph = cph;
-    }*/
+    }
+
+    public String getSjh() {
+        return sjh;
+    }
+
+    public void setSjh(String sjh) {
+        this.sjh = sjh;
+    }
 
     public String getCxly() {
         return cxly;

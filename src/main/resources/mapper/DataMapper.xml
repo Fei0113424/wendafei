@@ -3,15 +3,15 @@
 <mapper namespace="com.nowcoder.wenda.mapper.CrudMapper">
 
     <select id="queryByCradNum" resultType="com.nowcoder.wenda.model.TakeUser">
-        select * from takeaway_user where sfzjhm=#{sfzjhm}
+        select * from takeaway_user where sfzh=#{sfzh}
     </select>
     
     <insert id="insertUser" >
-        insert into takeaway_user (cph,cxly,cxlx,sfzjhm,xm,sfyzj,sfczrk,sfzzrk,sfcyjzz,yxbz,create_time)values (#{cph},#{cxly},#{cxlx},#{sfzjhm},#{xm},#{sfyzj},#{sfczrk},#{sfzzrk},#{sfcyjzz},#{yxbz},#{create_time})
+        insert into takeaway_user (cxly,cxlx,sfzh,xm,sfyzj,sfczrk,sfzzrk,sfcyjzz,yxbz,create_time)values (#{cxly},#{cxlx},#{sfzh},#{xm},#{sfyzj},#{sfczrk},#{sfzzrk},#{sfcyjzz},#{yxbz},#{create_time})
     </insert>
 
-    <delete id="deleteByCard" >
-        delete from usertest where sfzh=#{sfzh}
-    </delete>
+    <update id="deleteByCard" >
+        update  takeaway_user set yxbz=#{yxbz},delete_time=#{delete_time} where sfzh=#{sfzh}
+    </update>
 
 </mapper>

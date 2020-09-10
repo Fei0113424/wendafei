@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nowcoder.wenda.mapper.ExpreMapper">
+
+    <select id="queryByCradNum" resultType="com.nowcoder.wenda.model.Expressman">
+        select * from expressman where sfzh=#{sfzh}
+    </select>
+    
+    <insert id="insertUser" >
+        insert into expressman (sfzh,xm,sjh,sskdge,sfczrk,sfzzrk,sfyzj,sfcyjzz,cxly,cxlx,create_time,yxbz)values (#{sfzh},#{xm},#{sjh},#{sskdge},#{sfczrk},#{sfzzrk},#{sfyzj},#{sfcyjzz},#{cxly},#{cxlx},#{create_time},#{yxbz})
+    </insert>
+
+    <update id="deleteByCard" >
+        update  expressman set yxbz=#{yxbz},delete_time=#{delete_time} where sfzh=#{sfzh}
+    </update>
+
+</mapper>
